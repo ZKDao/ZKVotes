@@ -1,0 +1,1087 @@
+{
+  "contractName": "TimeHelpers",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820aa2cb5e28e86380a3b25dd8c476c581ff320e4cf373a8b25367b625f58e6e3d50029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820aa2cb5e28e86380a3b25dd8c476c581ff320e4cf373a8b25367b625f58e6e3d50029",
+  "sourceMap": "103:1266:26:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;103:1266:26;;;;;;;",
+  "deployedSourceMap": "103:1266:26:-;;;;;",
+  "source": "/*\n * SPDX-License-Identitifer:    MIT\n */\n\npragma solidity ^0.4.24;\n\nimport \"./Uint256Helpers.sol\";\n\n\ncontract TimeHelpers {\n    using Uint256Helpers for uint256;\n\n    /**\n    * @dev Returns the current block number.\n    *      Using a function rather than `block.number` allows us to easily mock the block number in\n    *      tests.\n    */\n    function getBlockNumber() internal view returns (uint256) {\n        return block.number;\n    }\n\n    /**\n    * @dev Returns the current block number, converted to uint64.\n    *      Using a function rather than `block.number` allows us to easily mock the block number in\n    *      tests.\n    */\n    function getBlockNumber64() internal view returns (uint64) {\n        return getBlockNumber().toUint64();\n    }\n\n    /**\n    * @dev Returns the current timestamp.\n    *      Using a function rather than `block.timestamp` allows us to easily mock it in\n    *      tests.\n    */\n    function getTimestamp() internal view returns (uint256) {\n        return block.timestamp; // solium-disable-line security/no-block-members\n    }\n\n    /**\n    * @dev Returns the current timestamp, converted to uint64.\n    *      Using a function rather than `block.timestamp` allows us to easily mock it in\n    *      tests.\n    */\n    function getTimestamp64() internal view returns (uint64) {\n        return getTimestamp().toUint64();\n    }\n}\n",
+  "sourcePath": "@aragon/os/contracts/common/TimeHelpers.sol",
+  "ast": {
+    "absolutePath": "@aragon/os/contracts/common/TimeHelpers.sol",
+    "exportedSymbols": {
+      "TimeHelpers": [
+        6175
+      ]
+    },
+    "id": 6176,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6130,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "44:24:26"
+      },
+      {
+        "absolutePath": "@aragon/os/contracts/common/Uint256Helpers.sol",
+        "file": "./Uint256Helpers.sol",
+        "id": 6131,
+        "nodeType": "ImportDirective",
+        "scope": 6176,
+        "sourceUnit": 6203,
+        "src": "70:30:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6175,
+        "linearizedBaseContracts": [
+          6175
+        ],
+        "name": "TimeHelpers",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 6134,
+            "libraryName": {
+              "contractScope": null,
+              "id": 6132,
+              "name": "Uint256Helpers",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6202,
+              "src": "136:14:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Uint256Helpers_$6202",
+                "typeString": "library Uint256Helpers"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "130:33:26",
+            "typeName": {
+              "id": 6133,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "155:7:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "body": {
+              "id": 6142,
+              "nodeType": "Block",
+              "src": "405:36:26",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 6139,
+                      "name": "block",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9191,
+                      "src": "422:5:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_block",
+                        "typeString": "block"
+                      }
+                    },
+                    "id": 6140,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "number",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "422:12:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 6138,
+                  "id": 6141,
+                  "nodeType": "Return",
+                  "src": "415:19:26"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current block number.\n     Using a function rather than `block.number` allows us to easily mock the block number in\n     tests.",
+            "id": 6143,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getBlockNumber",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6135,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "370:2:26"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6138,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6137,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6143,
+                  "src": "396:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6136,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "396:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "395:9:26"
+            },
+            "scope": 6175,
+            "src": "347:94:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6153,
+              "nodeType": "Block",
+              "src": "705:51:26",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 6148,
+                          "name": "getBlockNumber",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6143,
+                          "src": "722:14:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view returns (uint256)"
+                          }
+                        },
+                        "id": 6149,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "722:16:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "id": 6150,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "toUint64",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6201,
+                      "src": "722:25:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint64_$bound_to$_t_uint256_$",
+                        "typeString": "function (uint256) pure returns (uint64)"
+                      }
+                    },
+                    "id": 6151,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "722:27:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "functionReturnParameters": 6147,
+                  "id": 6152,
+                  "nodeType": "Return",
+                  "src": "715:34:26"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current block number, converted to uint64.\n     Using a function rather than `block.number` allows us to easily mock the block number in\n     tests.",
+            "id": 6154,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getBlockNumber64",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6144,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "671:2:26"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6147,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6146,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6154,
+                  "src": "697:6:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 6145,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:6:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:8:26"
+            },
+            "scope": 6175,
+            "src": "646:110:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6162,
+              "nodeType": "Block",
+              "src": "982:88:26",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 6159,
+                      "name": "block",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9191,
+                      "src": "999:5:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_block",
+                        "typeString": "block"
+                      }
+                    },
+                    "id": 6160,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "timestamp",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "999:15:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 6158,
+                  "id": 6161,
+                  "nodeType": "Return",
+                  "src": "992:22:26"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current timestamp.\n     Using a function rather than `block.timestamp` allows us to easily mock it in\n     tests.",
+            "id": 6163,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getTimestamp",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6155,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "947:2:26"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6157,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6163,
+                  "src": "973:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6156,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "973:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "972:9:26"
+            },
+            "scope": 6175,
+            "src": "926:144:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6173,
+              "nodeType": "Block",
+              "src": "1318:49:26",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 6168,
+                          "name": "getTimestamp",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6163,
+                          "src": "1335:12:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view returns (uint256)"
+                          }
+                        },
+                        "id": 6169,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1335:14:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "id": 6170,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "toUint64",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6201,
+                      "src": "1335:23:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint64_$bound_to$_t_uint256_$",
+                        "typeString": "function (uint256) pure returns (uint64)"
+                      }
+                    },
+                    "id": 6171,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1335:25:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "functionReturnParameters": 6167,
+                  "id": 6172,
+                  "nodeType": "Return",
+                  "src": "1328:32:26"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current timestamp, converted to uint64.\n     Using a function rather than `block.timestamp` allows us to easily mock it in\n     tests.",
+            "id": 6174,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getTimestamp64",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6164,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1284:2:26"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6167,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6166,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6174,
+                  "src": "1310:6:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 6165,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1310:6:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1309:8:26"
+            },
+            "scope": 6175,
+            "src": "1261:106:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 6176,
+        "src": "103:1266:26"
+      }
+    ],
+    "src": "44:1326:26"
+  },
+  "legacyAST": {
+    "absolutePath": "@aragon/os/contracts/common/TimeHelpers.sol",
+    "exportedSymbols": {
+      "TimeHelpers": [
+        6175
+      ]
+    },
+    "id": 6176,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6130,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "44:24:26"
+      },
+      {
+        "absolutePath": "@aragon/os/contracts/common/Uint256Helpers.sol",
+        "file": "./Uint256Helpers.sol",
+        "id": 6131,
+        "nodeType": "ImportDirective",
+        "scope": 6176,
+        "sourceUnit": 6203,
+        "src": "70:30:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6175,
+        "linearizedBaseContracts": [
+          6175
+        ],
+        "name": "TimeHelpers",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 6134,
+            "libraryName": {
+              "contractScope": null,
+              "id": 6132,
+              "name": "Uint256Helpers",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6202,
+              "src": "136:14:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Uint256Helpers_$6202",
+                "typeString": "library Uint256Helpers"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "130:33:26",
+            "typeName": {
+              "id": 6133,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "155:7:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "body": {
+              "id": 6142,
+              "nodeType": "Block",
+              "src": "405:36:26",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 6139,
+                      "name": "block",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9191,
+                      "src": "422:5:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_block",
+                        "typeString": "block"
+                      }
+                    },
+                    "id": 6140,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "number",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "422:12:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 6138,
+                  "id": 6141,
+                  "nodeType": "Return",
+                  "src": "415:19:26"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current block number.\n     Using a function rather than `block.number` allows us to easily mock the block number in\n     tests.",
+            "id": 6143,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getBlockNumber",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6135,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "370:2:26"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6138,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6137,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6143,
+                  "src": "396:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6136,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "396:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "395:9:26"
+            },
+            "scope": 6175,
+            "src": "347:94:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6153,
+              "nodeType": "Block",
+              "src": "705:51:26",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 6148,
+                          "name": "getBlockNumber",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6143,
+                          "src": "722:14:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view returns (uint256)"
+                          }
+                        },
+                        "id": 6149,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "722:16:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "id": 6150,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "toUint64",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6201,
+                      "src": "722:25:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint64_$bound_to$_t_uint256_$",
+                        "typeString": "function (uint256) pure returns (uint64)"
+                      }
+                    },
+                    "id": 6151,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "722:27:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "functionReturnParameters": 6147,
+                  "id": 6152,
+                  "nodeType": "Return",
+                  "src": "715:34:26"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current block number, converted to uint64.\n     Using a function rather than `block.number` allows us to easily mock the block number in\n     tests.",
+            "id": 6154,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getBlockNumber64",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6144,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "671:2:26"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6147,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6146,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6154,
+                  "src": "697:6:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 6145,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:6:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:8:26"
+            },
+            "scope": 6175,
+            "src": "646:110:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6162,
+              "nodeType": "Block",
+              "src": "982:88:26",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 6159,
+                      "name": "block",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9191,
+                      "src": "999:5:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_block",
+                        "typeString": "block"
+                      }
+                    },
+                    "id": 6160,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "timestamp",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "999:15:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 6158,
+                  "id": 6161,
+                  "nodeType": "Return",
+                  "src": "992:22:26"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current timestamp.\n     Using a function rather than `block.timestamp` allows us to easily mock it in\n     tests.",
+            "id": 6163,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getTimestamp",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6155,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "947:2:26"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6157,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6163,
+                  "src": "973:7:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6156,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "973:7:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "972:9:26"
+            },
+            "scope": 6175,
+            "src": "926:144:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6173,
+              "nodeType": "Block",
+              "src": "1318:49:26",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 6168,
+                          "name": "getTimestamp",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6163,
+                          "src": "1335:12:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view returns (uint256)"
+                          }
+                        },
+                        "id": 6169,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1335:14:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "id": 6170,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "toUint64",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6201,
+                      "src": "1335:23:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint64_$bound_to$_t_uint256_$",
+                        "typeString": "function (uint256) pure returns (uint64)"
+                      }
+                    },
+                    "id": 6171,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1335:25:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "functionReturnParameters": 6167,
+                  "id": 6172,
+                  "nodeType": "Return",
+                  "src": "1328:32:26"
+                }
+              ]
+            },
+            "documentation": "@dev Returns the current timestamp, converted to uint64.\n     Using a function rather than `block.timestamp` allows us to easily mock it in\n     tests.",
+            "id": 6174,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getTimestamp64",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6164,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1284:2:26"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6167,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6166,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6174,
+                  "src": "1310:6:26",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 6165,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1310:6:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1309:8:26"
+            },
+            "scope": 6175,
+            "src": "1261:106:26",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 6176,
+        "src": "103:1266:26"
+      }
+    ],
+    "src": "44:1326:26"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-08T13:56:44.119Z"
+}

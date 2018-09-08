@@ -1,0 +1,17 @@
+{
+  "appName": "zkdao.aragonpm.eth",
+  "version": "1.0.0",
+  "roles": [
+    {
+      "name": "Increment the counter",
+      "id": "CREATE_VOTES_ROLE",
+      "params": []
+    },
+    {
+      "name": "Decrement the counter",
+      "id": "MODIFY_QUORUM_ROLE",
+      "params": []
+    }
+  ],
+  "path": "contracts/Voting.sol"
+}

@@ -1,0 +1,835 @@
+{
+	"appName": "zkdao.aragonpm.eth",
+	"version": "1.0.0",
+	"roles": [
+		{
+			"name": "Increment the counter",
+			"id": "CREATE_VOTES_ROLE",
+			"params": [],
+			"bytes": "0xe7dcd7275292e064d090fbc5f3bd7995be23b502c1fed5cd94cfddbbdcd32bbc"
+		},
+		{
+			"name": "Decrement the counter",
+			"id": "MODIFY_QUORUM_ROLE",
+			"params": [],
+			"bytes": "0xad15e7261800b4bb73f1b69d3864565ffb1fd00cb93cf14fe48da8f1f2149f39"
+		}
+	],
+	"path": "contracts/Voting.sol",
+	"appId": "0x5d5c46c12ca06d8734e0d8829fda9f7618dae377c93b8b448a6e7332d66fd9ac",
+	"abi": [
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "hasInitialized",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "KERNEL_APP_ID",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "APP_ADDR_NAMESPACE",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "getRecoveryVault",
+			"outputs": [
+				{
+					"name": "",
+					"type": "address"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "MODIFY_QUORUM_ROLE",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "EVMSCRIPT_REGISTRY_APP_ID",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "CORE_NAMESPACE",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "token",
+					"type": "address"
+				}
+			],
+			"name": "allowRecoverability",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "appId",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "ETH",
+			"outputs": [
+				{
+					"name": "",
+					"type": "address"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "getInitializationBlock",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "_token",
+					"type": "address"
+				}
+			],
+			"name": "transferToVault",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_sender",
+					"type": "address"
+				},
+				{
+					"name": "_role",
+					"type": "bytes32"
+				},
+				{
+					"name": "_params",
+					"type": "uint256[]"
+				}
+			],
+			"name": "canPerform",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "voteTime",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint64"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "CREATE_VOTES_ROLE",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "ACL_APP_ID",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "kernel",
+			"outputs": [
+				{
+					"name": "",
+					"type": "address"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "APP_BASES_NAMESPACE",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "minAcceptQuorumPct",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "isPetrified",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_script",
+					"type": "bytes"
+				}
+			],
+			"name": "getExecutor",
+			"outputs": [
+				{
+					"name": "",
+					"type": "address"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "supportRequiredPct",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "token",
+			"outputs": [
+				{
+					"name": "",
+					"type": "address"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "PCT_BASE",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"name": "voteId",
+					"type": "uint256"
+				}
+			],
+			"name": "StartVote",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"name": "voteId",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"name": "voter",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"name": "supports",
+					"type": "bool"
+				},
+				{
+					"indexed": false,
+					"name": "stake",
+					"type": "uint256"
+				}
+			],
+			"name": "CastVote",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"name": "voteId",
+					"type": "uint256"
+				}
+			],
+			"name": "ExecuteVote",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"name": "minAcceptQuorumPct",
+					"type": "uint256"
+				}
+			],
+			"name": "ChangeMinQuorum",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"name": "executor",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"name": "script",
+					"type": "bytes"
+				},
+				{
+					"indexed": false,
+					"name": "input",
+					"type": "bytes"
+				},
+				{
+					"indexed": false,
+					"name": "returnData",
+					"type": "bytes"
+				}
+			],
+			"name": "ScriptResult",
+			"type": "event"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "_token",
+					"type": "address"
+				},
+				{
+					"name": "_supportRequiredPct",
+					"type": "uint256"
+				},
+				{
+					"name": "_minAcceptQuorumPct",
+					"type": "uint256"
+				},
+				{
+					"name": "_voteTime",
+					"type": "uint64"
+				}
+			],
+			"name": "initialize",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "_minAcceptQuorumPct",
+					"type": "uint256"
+				}
+			],
+			"name": "changeMinAcceptQuorumPct",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "_executionScript",
+					"type": "bytes"
+				},
+				{
+					"name": "_metadata",
+					"type": "string"
+				}
+			],
+			"name": "newVote",
+			"outputs": [
+				{
+					"name": "voteId",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "_executionScript",
+					"type": "bytes"
+				},
+				{
+					"name": "_metadata",
+					"type": "string"
+				},
+				{
+					"name": "_castVote",
+					"type": "bool"
+				}
+			],
+			"name": "newVote",
+			"outputs": [
+				{
+					"name": "voteId",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "_voteId",
+					"type": "uint256"
+				},
+				{
+					"name": "_supports",
+					"type": "bool"
+				},
+				{
+					"name": "_executesIfDecided",
+					"type": "bool"
+				}
+			],
+			"name": "vote",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "_voteId",
+					"type": "uint256"
+				}
+			],
+			"name": "executeVote",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "isForwarder",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "pure",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "_evmScript",
+					"type": "bytes"
+				}
+			],
+			"name": "forward",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_sender",
+					"type": "address"
+				},
+				{
+					"name": "_evmCallScript",
+					"type": "bytes"
+				}
+			],
+			"name": "canForward",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_voteId",
+					"type": "uint256"
+				},
+				{
+					"name": "_voter",
+					"type": "address"
+				}
+			],
+			"name": "canVote",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_voteId",
+					"type": "uint256"
+				}
+			],
+			"name": "canExecute",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_voteId",
+					"type": "uint256"
+				}
+			],
+			"name": "getVote",
+			"outputs": [
+				{
+					"name": "open",
+					"type": "bool"
+				},
+				{
+					"name": "executed",
+					"type": "bool"
+				},
+				{
+					"name": "creator",
+					"type": "address"
+				},
+				{
+					"name": "startDate",
+					"type": "uint64"
+				},
+				{
+					"name": "snapshotBlock",
+					"type": "uint256"
+				},
+				{
+					"name": "minAcceptQuorum",
+					"type": "uint256"
+				},
+				{
+					"name": "yea",
+					"type": "uint256"
+				},
+				{
+					"name": "nay",
+					"type": "uint256"
+				},
+				{
+					"name": "totalVoters",
+					"type": "uint256"
+				},
+				{
+					"name": "script",
+					"type": "bytes"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_voteId",
+					"type": "uint256"
+				}
+			],
+			"name": "getVoteMetadata",
+			"outputs": [
+				{
+					"name": "",
+					"type": "string"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_voteId",
+					"type": "uint256"
+				},
+				{
+					"name": "_voter",
+					"type": "address"
+				}
+			],
+			"name": "getVoterState",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint8"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		}
+	],
+	"functions": [
+		{
+			"sig": "initialize()",
+			"roles": [],
+			"notice": "Initializes Voting app with `_token.symbol(): string` for governance, minimum support of `(_supportRequiredPct - _supportRequiredPct % 10^16) / 10^14`, minimum acceptance quorum of `(_minAcceptQuorumPct - _minAcceptQuorumPct % 10^16) / 10^14` and vote duations of `(_voteTime - _voteTime % 86400) / 86400` day `_voteTime >= 172800 ? 's' : ''`"
+		},
+		{
+			"sig": "changeMinAcceptQuorumPct(address)",
+			"roles": [
+				"MODIFY_QUORUM_ROLE"
+			],
+			"notice": "Change minimum acceptance quorum to `(_minAcceptQuorumPct - _minAcceptQuorumPct % 10^16) / 10^14`%"
+		},
+		{
+			"sig": "newVote(bytes,address)",
+			"roles": [
+				"CREATE_VOTES_ROLE"
+			],
+			"notice": "Create a new vote about \"`_metadata`\""
+		},
+		{
+			"sig": "newVote(bytes,address,bool)",
+			"roles": [
+				"CREATE_VOTES_ROLE"
+			],
+			"notice": "Create a new vote about \"`_metadata`\""
+		},
+		{
+			"sig": "vote(uint256,bool,bool)",
+			"roles": [],
+			"notice": "Vote `_supports ? 'yea' : 'nay'` in vote #`_voteId`"
+		},
+		{
+			"sig": "executeVote(uint256)",
+			"roles": [],
+			"notice": "Execute the result of vote #`_voteId`"
+		},
+		{
+			"sig": "forward(bytes)",
+			"roles": [],
+			"notice": "Creates a vote to execute the desired action, and casts a support vote"
+		},
+		{
+			"sig": "_vote(uint256,bool,address,bool)",
+			"roles": [],
+			"notice": null
+		}
+	]
+}
